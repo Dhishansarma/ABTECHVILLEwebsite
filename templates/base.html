@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}ABTechVille{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/project.css' %}">
+    <link rel="stylesheet" href="{% static 'css/workshop.css' %}">
+    <link rel="stylesheet" href="{% static 'css/about.css' %}">
+    <link rel="stylesheet" href="{% static 'css/career.css' %}">
+    <link rel="stylesheet" href="{% static 'css/photos.css' %}">
+    <link rel="stylesheet" href="{% static 'css/projectdetails.css' %}">
+    <link rel="stylesheet" href="{% static 'css/projectlist.css' %}">
+
+
+    
+</head>
+<body>
+ 
+    
+    <header>
+        <div class="logo">
+            <img src="{% static 'images/ABTechvillelogo.png' %}" alt="ABTechVille Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About us</a></li>
+                <li><a href="{% url 'photo' %}">Photos</a></li>
+                <li><a href="{% url 'careers' %}">Careers</a></li>
+                <li><a href="{% url 'event' %}">Events</a></li>
+                
+                
+            </ul>
+        </nav>
+    </header>
+    
+    
+    {% block content %}
+
+    {% endblock %}
+   
+    
+    {% include 'footer.html' %}  <!-- Include Footer -->
+
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
